@@ -848,6 +848,12 @@ address {
   margin-right: 8px;
 }
 
+@media screen and (max-width: 767px) {
+  .list-btn__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
 .portfolio__btn {
   font-family: inherit;
   cursor: pointer;
