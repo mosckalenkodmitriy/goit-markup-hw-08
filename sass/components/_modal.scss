@@ -1,0 +1,205 @@
+.modal {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+
+  min-width: 528px;
+  height: 581px;
+  background-color: $primary-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &__title {
+    margin-bottom: 40px;
+    @include font(20px, 1.15, bold, 0.03em);
+    text-align: center;
+    color: $primary-text-color;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    position: relative;
+    margin-bottom: 30px;
+    display: block;
+    cursor: pointer;
+  }
+
+  &__data {
+    position: absolute;
+    top: 50%;
+    left: 42px;
+    transform: translateY(-50%);
+    color: $primary-grey-color;
+    transition: transform 250ms $time-function;
+  }
+
+  &__comment {
+    position: absolute;
+    top: -22px;
+    left: 0px;
+    color: $primary-grey-color;
+  }
+  &__textrule {
+    text-decoration: underline;
+    color: $primary-blue-color;
+  }
+  &__button {
+    min-width: 200px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+}
+
+// Modal-close-btn
+
+.modal__close-btn {
+  position: absolute;
+  right: 13px;
+  top: 7px;
+  background-color: inherit;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: fill 250ms $time-function;
+  &:hover,
+  &:focus {
+    fill: $primary-blue-color;
+    outline: none;
+  }
+}
+
+// Modal-input
+.modal__input {
+  display: block;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  &:focus + .modal__data,
+  &:not(:placeholder-shown) + .modal__data {
+    transform: translate(-40px, -45px);
+  }
+
+  &:focus,
+  &:hover {
+    border: 1px solid $primary-blue-color;
+    outline: none;
+  }
+}
+// Modal__input ~ Modal__icon
+.modal__input {
+  & ~ .modal__icon {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    transition: fill 250ms $time-function;
+  }
+  &:focus ~ .modal__icon {
+    fill: $primary-blue-color;
+  }
+}
+
+// Modal__textarea
+.modal__textarea {
+  padding: 0;
+  margin: 0;
+  & {
+    display: block;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  &:focus,
+  &:hover {
+    outline: none;
+    border: 1px solid $primary-blue-color;
+  }
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+// Modal-check
+.modal {
+  &__checktext {
+    @include font(14px, 1.7, normal, 0.03em);
+  }
+  &__checked {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}
+
+// Modal-checkbox
+.modal {
+  &__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  &__iconcheck {
+    display: inline-block;
+    margin-right: 7px;
+    width: 15px;
+    height: 14px;
+    border: 2px solid $primary-text-color;
+    border-radius: 2px;
+    background-size: cover;
+    transition: background-color 250ms $time-function,
+      background-image 250ms $time-function;
+    .modal__checkbox:checked + & {
+      background-color: $primary-blue-color;
+      background-image: url(../images/icons/icon-check.svg);
+      background-size: contain;
+      background-origin: border-box;
+      border: none;
+    }
+    .modal__checkbox:focus + &,
+    .modal__checkbox:hover + & {
+      border: 1px solid $primary-blue-color;
+    }
+  }
+}
+
+// Backdrop
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

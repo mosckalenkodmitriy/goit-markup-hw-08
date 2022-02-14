@@ -1,0 +1,11 @@
+.logo {
+  @include font(26px, 1.2, bold, 0.03em);
+  color: $primary-blue-color;
+  font-family: Raleway;
+  &--black {
+    color: $primary-black-color;
+  }
+  &--white {
+    color: $primary-white-color;
+  }
+}

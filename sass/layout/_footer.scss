@@ -1,0 +1,165 @@
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-bottom: -60px;
+  & .logo {
+    margin-bottom: 20px;
+    display: block;
+  }
+  &__container {
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      align-items: baseline;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+  &__cont-item {
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+    }
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 60px;
+    }
+  }
+  &__cont-item:last-child {
+    @media screen and (min-width: 320px) and (max-width: 1199px) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    @media screen and (max-width: 1199px) {
+      width: 100%;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-left: auto;
+    }
+    margin-bottom: 0px;
+  }
+  &__cont-item:not(:last-child) {
+    @media screen and (min-width: 1200px) {
+      margin-right: 70px;
+    }
+  }
+  &__feedback {
+    @media screen and (min-width: 320px) and (max-width: 1199px) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    &_item:not(:last-child) {
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 9px;
+      }
+    }
+    &_link {
+      color: $primary-adress-color;
+      &[target="_blank"] {
+        color: $primary-white-color;
+      }
+    }
+  }
+}
+
+// Subscribe
+.subscribe {
+  &__text {
+    display: block;
+    text-align: center;
+    color: $primary-white-color;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    @include font(14px, 1.14, bold, 0.03em);
+  }
+}
+
+// Support
+.support__address {
+  @include font(14px, 1.7, normal, 0.03em);
+  color: $primary-white-color;
+
+  margin-top: 20px;
+  margin-bottom: 9px;
+}
+
+// Footer-socials
+.footer__socials-link {
+  fill: $primary-white-color;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+// Form
+
+.newsletter-form {
+  display: flex;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__label {
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__input {
+    @include font(16px, 1.06, normal, 0.03em);
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background: inherit;
+    height: 50px;
+    color: $primary-white-color;
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      width: 450px;
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+    }
+  }
+}
+
+// Btn__telegram
+.newsletter-form__btn {
+  position: relative;
+  padding: 10px 62px 10px 29px;
+  margin-left: 12px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+    align-self: flex-end;
+  }
+}
+.newsletter-form__icon {
+  top: 13px;
+  right: 28px;
+  position: absolute;
+}

@@ -1,0 +1,19 @@
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  &-title {
+    @media screen and (max-width: 1199px) {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    text-align: center;
+    @include font(36px, 1.17, bold, 0.03em);
+    margin-bottom: 50px;
+    color: $primary-text-color;
+  }
+}

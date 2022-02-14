@@ -1,0 +1,30 @@
+%button {
+  @include font(16px, 1.9, bold, 0.06em);
+  font-family: Raleway;
+  color: $primary-white-color;
+  background-color: $primary-blue-color;
+  cursor: pointer;
+  border: transparent;
+  border-radius: 4px;
+  padding: 10px 32px;
+  transition: background-color 250ms $time-function, color 250ms $time-function;
+  &:hover,
+  &focus {
+    background-color: $second-blue-color;
+  }
+}
+%menu-btns {
+  border: none;
+  background-color: $primary-white-color;
+  cursor: pointer;
+  transition: fill 250ms $time-function;
+  &:hover,
+  &:focus {
+    fill: $primary-blue-color;
+  }
+}
+%flex-footer-adapt {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

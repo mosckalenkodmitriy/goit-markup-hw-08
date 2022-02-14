@@ -1,0 +1,29 @@
+.client {
+  --card-set-item: 6;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    --card-set-adapt: 3;
+  }
+  &__item {
+    align-items: center;
+    justify-content: center;
+  }
+  &__link {
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 92px;
+    width: 100%;
+    transition: fill 250ms $time-function, border 250ms $time-function;
+    &:hover,
+    &:focus {
+      border: 1px solid $primary-blue-color;
+      outline: none;
+      & .client__icon {
+        transition: fill 250ms $time-function;
+        fill: $primary-blue-color;
+      }
+    }
+  }
+}

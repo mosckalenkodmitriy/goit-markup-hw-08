@@ -1,0 +1,103 @@
+// List-btn
+.list-btn {
+  display: flex;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+.portfolio__btn {
+  font-family: inherit;
+  cursor: pointer;
+
+  @include font(16px, 1.6, 500, 0.03em);
+  padding: 6px 22px;
+  background-color: $primary-button-color;
+  color: $primary-text-color;
+  transition: background-color 250ms $time-function, color 250ms $time-function;
+
+  &:hover,
+  &:focus,
+  &.active-btn {
+    color: $primary-white-color;
+    background-color: $primary-blue-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+  border: none;
+  border-radius: 4px;
+}
+
+// Grid
+.portfolio-list {
+  --card-set-item: 3;
+  @media screen and (max-width: 767px) {
+    --card-set-adapt: 1;
+  }
+}
+
+.portfolio-card {
+  &__link {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    &:focus,
+    &:hover {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+      outline: none;
+    }
+  }
+  &__name {
+    @include font(18px, 2, bold, 0.06em);
+    color: $primary-text-color;
+    margin-bottom: 4px;
+  }
+  &__discription {
+    @include font(16px, 1.98, normal, 0.03em);
+    color: $primary-grey-color;
+  }
+  &__wrapper {
+    border: 1px solid #eeeeee;
+    border-top: none;
+    padding: 20px 24px;
+  }
+}
+
+// Overlay-Text
+.portfolio-card__overlay-text {
+  background-color: $primary-overlay-color;
+  height: 100%;
+  padding: 49px 24px;
+  color: $primary-white-color;
+  position: absolute;
+  @include font(18px, 1.55, normal, 0.03em);
+  top: 0px;
+
+  transform: translate(-50%, -50%);
+  transform: translateY(135%);
+  transition: transform 250ms $time-function;
+  overflow: auto;
+  .portfolio-card__link:hover &,
+  .portfolio-card__link:focus & {
+    transform: translateY(0);
+  }
+}
+// Overlay Bcg
+.portfolio-card {
+  &__overlay {
+    position: relative;
+    overflow: hidden;
+  }
+}

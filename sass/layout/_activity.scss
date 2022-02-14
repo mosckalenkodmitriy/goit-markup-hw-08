@@ -1,0 +1,22 @@
+.activity {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+
+  --card-set-item: 3;
+  &__item {
+    position: relative;
+  }
+  &__text {
+    position: absolute;
+    bottom: 7px;
+    padding: 24px;
+    width: 100%;
+
+    @include font(14px, 1.14, bold, 0.03em);
+    text-transform: uppercase;
+    color: $primary-white-color;
+    background: rgba(47, 48, 58, 0.8);
+    text-align: center;
+  }
+}
