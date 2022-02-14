@@ -1,18 +1,23 @@
 .modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
 
-  min-width: 528px;
-  height: 581px;
   background-color: $primary-white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition: transform 450ms $time-function;
 
   &__title {
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      line-height: 1.5;
+    }
     margin-bottom: 40px;
     @include font(20px, 1.15, bold, 0.03em);
     text-align: center;
@@ -198,8 +203,12 @@
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.2);
+  transition: opacity 450ms $time-function;
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
+    & .modal {
+      transform: translate(0%, -100%) scale(1) rotate(45deg);
+    }
   }
 }
