@@ -567,7 +567,7 @@ address {
   color: #212121;
 }
 
-.mobile-nav__link:hover, .mobile-nav__link:focus {
+.mobile-nav__link:hover, .mobile-nav__link:focus, .mobile-nav__link.current-link-mobile {
   color: #2196f3;
 }
 

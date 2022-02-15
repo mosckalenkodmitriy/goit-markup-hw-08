@@ -44,7 +44,8 @@
     @include font(40px, 1.18, 500, 0.02em);
     color: $primary-text-color;
     &:hover,
-    &:focus {
+    &:focus,
+    &.current-link-mobile {
       color: $primary-blue-color;
     }
   }
