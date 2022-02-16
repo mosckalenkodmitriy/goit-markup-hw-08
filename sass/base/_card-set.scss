@@ -1,17 +1,9 @@
 .card-set {
-  @media screen and (min-width: 320px) {
-    display: flex;
-    flex-wrap: wrap;
-    @include card-set(-30px, -30px);
-  }
+  display: flex;
+  flex-wrap: wrap;
+  @include card-set(-30px, -30px);
 }
 .card-set-item {
-  @media screen and (min-width: 320px) and (max-width: 1199px) {
-    @include card-set(30px, 30px);
-    flex-basis: calc((100% / var(--card-set-adapt) - 30px));
-  }
-  @media screen and (min-width: 1200px) {
-    @include card-set(30px, 30px);
-    flex-basis: calc((100% / var(--card-set-item) - 30px));
-  }
+  @include card-set(30px, 30px);
+  flex-basis: calc((100% / var(--card-set-item) - 30px));
 }

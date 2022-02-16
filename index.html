@@ -37,7 +37,10 @@
         </nav>
         <ul class="list header__feedback-list">
           <li class="header__feedback-item">
-            <a href="mailto:info@devstudio.com" class="link header__feedback-link">
+            <a
+              href="mailto:info@devstudio.com"
+              class="link header__feedback-link"
+            >
               <svg class="header__feedback-icon" width="16" height="12">
                 <use
                   href="./images/icons/symbol-defs-opt.svg#icon-envelope"
@@ -58,75 +61,93 @@
           </li>
         </ul>
         <div class="mobile-menu__hidden">
-        <button type="button" class="menu-open">
-          <svg class="modal__open-btn_icon" width="24px" height="16px">
-            <use href="./images/icons/symbol-defs-opt.svg#mobile-menu-open"></use>
-          </svg>
-        </button>
-        
-        <div class="mobile-menu is-hidden">  
-        <div class="container mobile-menu__container">
-      <button type="button" class="menu-close">
-        <svg class="modal__close-btn_icon" width="18px" height="18px">
-            <use href="./images/icons/symbol-defs-opt.svg#close__btn"></use>
-          </svg>
-      </button>
-      <nav>
-       <ul class="list mobile-nav">
-         <li class="item mobile-nav__item">
-           <a href="#" class="link mobile-nav__link current-link-mobile">Cтудия</a>
-          </li>
-         <li class="item mobile-nav__item">
-           <a href="./portfolio.html" class="link mobile-nav__link">Портфолио</a> 
-          </li>
-         <li class="item mobile-nav__item">
-           <a href="#" class="link mobile-nav__link">Контакты</a>
-          </li>
-       </ul>
-       </nav>
-       <div class="mobile-feedback">
-       <ul class="list mobile__feedback-list">
-         <li class="mobile-feedback__item">
-           <a href="tel:+380961111111" class="link mobile-feedback__link"
-             >
-             +38 096 111 11 11
-           </a>
-         </li>
-          <li class="mobile-feedback__item">
-            <a href="mailto:info@devstudio.com" class="link mobile-feedback__link">
-              info@devstudio.com
-            </a>
-          </li>
-        </ul>
+          <button type="button" class="menu-open">
+            <svg class="modal__open-btn_icon" width="24px" height="16px">
+              <use
+                href="./images/icons/symbol-defs-opt.svg#mobile-menu-open"
+              ></use>
+            </svg>
+          </button>
 
-       <ul class="list mobile-socials">
-        <li class="item mobile-socials__item">
-          <a href="#" class="link mobile-socials__link">Instagram</a>
-        </li>
-        <li class="item mobile-socials__item">
-          <a href="#" class="link mobile-socials__link">Twitter</a>
-        </li>  
-        <li class="item mobile-socials__item">
-          <a href="#" class="link mobile-socials__link">Facebook</a>
-        </li>  
-        <li class="item mobile-socials__item">
-          <a href="#" class="link mobile-socials__link">LinkedIn</a>
-        </li>  
-       </ul>
+          <div class="mobile-menu is-hidden">
+            <div class="container mobile-menu__container">
+              <button type="button" class="menu-close">
+                <svg class="modal__close-btn_icon" width="18px" height="18px">
+                  <use
+                    href="./images/icons/symbol-defs-opt.svg#close__btn"
+                  ></use>
+                </svg>
+              </button>
+              <nav>
+                <ul class="list mobile-nav">
+                  <li class="item mobile-nav__item">
+                    <a
+                      href="#"
+                      class="link mobile-nav__link current-link-mobile"
+                      >Cтудия</a
+                    >
+                  </li>
+                  <li class="item mobile-nav__item">
+                    <a href="./portfolio.html" class="link mobile-nav__link"
+                      >Портфолио</a
+                    >
+                  </li>
+                  <li class="item mobile-nav__item">
+                    <a href="#" class="link mobile-nav__link">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="mobile-feedback">
+                <ul class="list mobile-feedback_list">
+                  <li class="mobile-feedback__item">
+                    <a
+                      href="tel:+380961111111"
+                      class="link mobile-feedback__link"
+                    >
+                      +38 096 111 11 11
+                    </a>
+                  </li>
+                  <li class="mobile-feedback__item">
+                    <a
+                      href="mailto:info@devstudio.com"
+                      class="link mobile-feedback__link"
+                    >
+                      info@devstudio.com
+                    </a>
+                  </li>
+                </ul>
+
+                <ul class="list mobile-socials">
+                  <li class="item mobile-socials__item">
+                    <a href="#" class="link mobile-socials__link">Instagram</a>
+                  </li>
+                  <li class="item mobile-socials__item">
+                    <a href="#" class="link mobile-socials__link">Twitter</a>
+                  </li>
+                  <li class="item mobile-socials__item">
+                    <a href="#" class="link mobile-socials__link">Facebook</a>
+                  </li>
+                  <li class="item mobile-socials__item">
+                    <a href="#" class="link mobile-socials__link">LinkedIn</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        </div>
-      </div>
       </div>
     </header>
-    <main class="main-pages"> 
-       <section class="section hero">
+    <main class="main-pages">
+      <section class="section hero">
         <div class="container">
-          <h1 class="hero__title">Эффективные решения<br>для вашего бизнеса</h1>
+          <h1 class="hero__title">
+            Эффективные решения<br />для вашего бизнеса
+          </h1>
           <button class="button" type="button" data-modal-open>
             Заказать услугу
           </button>
         </div>
-      </section> 
+      </section>
       <section class="section feature">
         <div class="container">
           <ul class="list card-set">
@@ -222,12 +243,22 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="list card-set team__list">
             <li class="card-set-item team__item">
-              <img
-                srcset="./images/main-pages/Igor.jpg 1x, ./images/img2x/igor-2x.jpg 2x"
-                class="team__item-img"
-                src="./images/main-pages/Igor.jpg"
-                alt="per"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main-pages/Igor.jpg 1x,
+                    ./images/img2x/igor-2x.jpg   2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/main-pages/Igor.jpg"
+                  alt="per"
+                  width
+                  height
+                />
+              </picture>
+
               <div class="team__item-wrapper">
                 <h3 class="team__item-title">Игорь Демьяненко</h3>
                 <p class="team__item-text">Product Designer</p>
@@ -293,12 +324,22 @@
               </div>
             </li>
             <li class="card-set-item team__item">
-              <img
-                srcset="./images/main-pages/Olga.jpg 1x, ./images/img2x/olga-2x.jpg 2x"
-                class="team__item-img"
-                src="./images/main-pages/Olga.jpg"
-                alt="per"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main-pages/Olga.jpg 1x,
+                    ./images/img2x/olga-2x.jpg   2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/main-pages/Olga.jpg"
+                  alt="per"
+                  width
+                  height
+                />
+              </picture>
+
               <div class="team__item-wrapper">
                 <h3 class="team__item-title">Ольга Репина</h3>
                 <p class="team__item-text">Frontend Developer</p>
@@ -363,15 +404,21 @@
               </div>
             </li>
             <li class="card-set-item team__item">
-              <img
-                srcset="
-                  ./images/main-pages/Nikolay.jpg 1x,
-                  ./images/img2x/nikolay-2x.jpg 2x
-                "
-                class="team__item-img"
-                src="./images/main-pages/Nikolay.jpg"
-                alt="per"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main-pages/Nikolay.jpg 1x,
+                    ./images/img2x/nikolay-2x.jpg   2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/main-pages/Nikolay.jpg"
+                  alt="per"
+                  width
+                  height
+                />
+              </picture>
               <div class="team__item-wrapper">
                 <h3 class="team__item-title">Николай Тарасов</h3>
                 <p class="team__item-text">Marketing</p>
@@ -436,15 +483,21 @@
               </div>
             </li>
             <li class="card-set-item team__item">
-              <img
-                srcset="
-                  ./images/main-pages/Michael.jpg 1x,
-                  ./images/img2x/michael-2x.jpg 2x
-                "
-                class="team__item-img"
-                src="./images/main-pages/Michael.jpg"
-                alt="per"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main-pages/Michael.jpg 1x,
+                    ./images/img2x/michael-2x.jpg   2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/main-pages/Michael.jpg"
+                  alt="per"
+                  width
+                  height
+                />
+              </picture>
               <div class="team__item-wrapper">
                 <h3 class="team__item-title">Михаил Ермаков</h3>
                 <p class="team__item-text">UI Designer</p>
@@ -825,12 +878,3 @@
     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-

@@ -1,4 +1,6 @@
 .modal {
+  max-width: 450px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -151,7 +153,7 @@
 // Modal-check
 .modal {
   &__checktext {
-    @include font(14px, 1.7, normal, 0.03em);
+    @include font(14px, 1, normal, 0.03em);
   }
   &__checked {
     display: flex;
@@ -178,6 +180,7 @@
     border: 2px solid $primary-text-color;
     border-radius: 2px;
     background-size: cover;
+    flex-shrink: 0;
     transition: background-color 250ms $time-function,
       background-image 250ms $time-function;
     .modal__checkbox:checked + & {

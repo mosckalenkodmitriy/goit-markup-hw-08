@@ -40,6 +40,9 @@
 }
 
 .mobile-nav {
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
   &__link {
     @include font(40px, 1.18, 500, 0.02em);
     color: $primary-text-color;
@@ -51,6 +54,9 @@
   }
 }
 .mobile-feedback {
+  &_list {
+    margin-bottom: 64px;
+  }
   &__item {
     @include font(24px, 1.16, 500, 0.02em);
   }
@@ -65,11 +71,13 @@
   display: flex;
   flex-wrap: wrap;
   margin-left: -10px;
+  margin-top: -10px;
   &__item {
     cursor: pointer;
     @include font(18px, 1.2, 500, 0.02em);
     margin-left: 10px;
     color: $primary-blue-color;
+    margin-top: 10px;
   }
   &__item:not(:last-child) {
     border-right: 1px solid rgba(33, 33, 33, 0.2);
