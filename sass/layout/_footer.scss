@@ -66,14 +66,14 @@
       align-items: center;
       flex-direction: column;
     }
+    &_link {
+      color: $primary-adress-color;
+      &[target="_blank"] {
+        color: $primary-white-color;
+      }
+    }
     &_item:not(:last-child) {
       margin-bottom: 8px;
-      &_link {
-        color: $primary-adress-color;
-        &[target="_blank"] {
-          color: $primary-white-color;
-        }
-      }
     }
   }
 

@@ -1005,7 +1005,7 @@ address {
           flex-grow: 1;
 }
 
-.portfolio-list .portfolio-card__overlay-text {
+.portfolio-card__overlay-text {
   background-color: rgba(33, 150, 243, 0.9);
   height: 100%;
   padding: 49px 24px;
@@ -1027,13 +1027,13 @@ address {
   overflow: auto;
 }
 
-.portfolio-card__link:hover .portfolio-list .portfolio-card__overlay-text,
-.portfolio-card__link:focus .portfolio-list .portfolio-card__overlay-text {
+.portfolio-card__link:hover .portfolio-card__overlay-text,
+.portfolio-card__link:focus .portfolio-card__overlay-text {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-.portfolio-list .portfolio-card__overlay {
+.portfolio-card__overlay {
   position: relative;
   overflow: hidden;
 }
@@ -1318,16 +1318,16 @@ address {
   }
 }
 
-.footer__feedback_item:not(:last-child) {
-  margin-bottom: 8px;
-}
-
-.footer__feedback_item:not(:last-child)_link {
+.footer__feedback_link {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer__feedback_item:not(:last-child)_link[target="_blank"] {
+.footer__feedback_link[target="_blank"] {
   color: #ffffff;
+}
+
+.footer__feedback_item:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .footer .subscribe__text {

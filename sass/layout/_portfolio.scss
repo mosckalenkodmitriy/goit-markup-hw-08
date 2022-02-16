@@ -83,31 +83,30 @@
       flex-grow: 1;
     }
   }
+}
+// Overlay-Text
+.portfolio-card__overlay-text {
+  background-color: $primary-overlay-color;
+  height: 100%;
+  padding: 49px 24px;
+  color: $primary-white-color;
+  position: absolute;
+  @include font(18px, 1.55, normal, 0.03em);
+  top: 0px;
 
-  // Overlay-Text
-  .portfolio-card__overlay-text {
-    background-color: $primary-overlay-color;
-    height: 100%;
-    padding: 49px 24px;
-    color: $primary-white-color;
-    position: absolute;
-    @include font(18px, 1.55, normal, 0.03em);
-    top: 0px;
-
-    transform: translate(-50%, -50%);
-    transform: translateY(135%);
-    transition: transform 250ms $time-function;
-    overflow: auto;
-    .portfolio-card__link:hover &,
-    .portfolio-card__link:focus & {
-      transform: translateY(0);
-    }
+  transform: translate(-50%, -50%);
+  transform: translateY(135%);
+  transition: transform 250ms $time-function;
+  overflow: auto;
+  .portfolio-card__link:hover &,
+  .portfolio-card__link:focus & {
+    transform: translateY(0);
   }
-  // Overlay Bcg
-  .portfolio-card {
-    &__overlay {
-      position: relative;
-      overflow: hidden;
-    }
+}
+// Overlay Bcg
+.portfolio-card {
+  &__overlay {
+    position: relative;
+    overflow: hidden;
   }
 }
